@@ -1,0 +1,14 @@
+language: python
+python:
+- '2.7'
+install: pip install -r requirements.txt
+script: nosetests
+deploy:
+  provider: heroku
+  api_key:
+    secure: uuHvLMt2ROA3k9ad9cK/YeF+p2wafjPMTl2YL6Qzbsw0Q3wBuCnb/uVqsTNi6ZCl+jMLmpd3Q0jBIAe3/LuOrTXUaTIr/ElShT0gbuXvaKEQZad19A+u89LsFYt7SXhdm/IYdmqkNZWX6bLN81rEWTvoDoZ4BbU+22dei43HhpJSUbQiZ/krmUFyAui1UKCWxDYaYp/GrpaGQL4xojYppa+owmIqrfYbDeX1X06PdYq4bxLCVoN0p+8d//9p6GDg7iyeA3r+d19bG6uudYkc6Kj7pI7XyQxaBYi7woozv2u7GX4SMla5r62LWr3hwILdMQ8n8iXbHV9nXBp6V1rujQJEHzuWZNK7ZkbSDIgP0LbkcD04nB7BdqE8rZNEEAexjakUFE8Gf7Pm97f4sCpf0STvSYeMvjCs7OsoXql/FSmwU33AzLu/nWez3vG0CuLH0wqG+lR3+LwIUATdNXV22IKJ3X3xdEYh/KOlDXuYMUnVJ4ulD+6pdpjPwWF/b8PIEi57Fy48u2c+J+7CD84SP+TMmDeX4rXpgIeGbl5MrpGFe6TAPQDUnEvQGzUPNR8IS9gbGXlIQ36nP59V4UTzAUUo4JiVv4t8zaDv9ybTTCUj5mys+iDzZV4CLD0QW6v2hyaru0h+RGVDmQNPu0X6fSa2mj/TmQ7z/MOmCgAHKCw=
+  app: mash-flask-oauth
+  on:
+    repo: matthew-shaw/flask-oauth-example
+    branch: master
+sudo: false
